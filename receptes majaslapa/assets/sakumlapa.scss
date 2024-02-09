@@ -1,0 +1,58 @@
+// .sakumlapa {
+//     display: flex;
+//     flex-direction: coulmn;
+//     gap: 1em;
+//     margin-top: 100px;
+// }
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+}
+.container1 {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    row-gap: 15px;
+    column-gap: 2px;
+    border-color: #25b711;
+    align-items: center;
+    justify-items: center;
+   
+}
+.container2 {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.post {
+    height: 300px;
+    font-size: 12px;
+    border: #fecb00 solid 1px;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: auto;
+    min-height: 100px;
+    max-width: 300px;
+    
+}
+.post h2 h3 h4 h5 h6 {
+    font-size: 18px;
+    background-color: #9676b6;
+    // position: absolute;
+}
+p {
+    align-items: center;
+    color: #fecb00;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
