@@ -1,0 +1,51 @@
+# Node.js
+node_modules/
+
+# Build files
+/build
+/dist
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+*.log*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+.env.production
+.env.local
+
+# IDE files
+.idea/
+.vscode/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Compiled binary addons
+*.node
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Next.js
+/.next/
+
+# React Storybook
+/storybook-static/
