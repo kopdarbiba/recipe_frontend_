@@ -1,11 +1,4 @@
-<template>
-    <div>
-      <div v-if="loading">Loading...</div>
-      <div v-else>
-        <RecipeDetails v-for="recipe in recipes" :key="recipe.title" :recipe="recipe" />
-      </div>
-    </div>
-  </template>
+
   
   <script>
   import RecipeDetails from './RecipeDetails.vue'; // Import the RecipeDetails component
@@ -19,7 +12,8 @@
       };
     },
     mounted() {
-      axios.get('http://13.49.33.156/recipes/complexSearch/?dietary_preferences=keto&lang=en')
+      axios.get('http://localhost:8000/api/recipes/?lang=en')
+      // axios.get('http://13.49.33.156/api/recipes/search/?lang=lv&ordering=total_price')
         .then(response => {
           this.recipes = response.data;
         })
@@ -36,3 +30,13 @@
   };
   </script>
   
+  <template>
+    <div>
+      <div v-if="loading">Loading...</div>
+      <div v-else>        
+        <ul>
+            <RecipeDetails v-for="recipe in recipes.results" :key="recipe" :recipe="recipe" />
+          </ul>
+        </div>
+    </div>
+  </template>

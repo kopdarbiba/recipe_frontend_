@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <Header />
     <main>
       <RecipeList />
     </main>
-    <Footer />
   </div>
 </template>
 

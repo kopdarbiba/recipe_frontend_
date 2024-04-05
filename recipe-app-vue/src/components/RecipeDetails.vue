@@ -1,13 +1,14 @@
 <template>
+  <li>
     <div>
+      <!-- <h1>{{ recipe.id }}</h1> -->
       <h1>{{ recipe.title }}</h1>
-      <p>{{ recipe.description }}</p>
-  
+      
       <!-- Check if recipe.images is defined and has at least one element -->
-      <img v-if="recipe.images && recipe.images.length > 0" :src="recipe.images[0].thumbnail_url" alt="Recipe Image" />
-  
-      <p>Price: {{ recipe.price }}</p>
+      <img v-if="recipe.images && recipe.images.length > 0" :src="recipe.images[0].generate_presigned_url_for_thumbnail" alt="Recipe Image" />
+      
     </div>
+  </li>
   </template>
   
   <script>
