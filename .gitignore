@@ -21,6 +21,8 @@ node_modules/
 # Production
 .env.production
 .env.local
+.env
+.venv
 
 # IDE files
 .idea/
