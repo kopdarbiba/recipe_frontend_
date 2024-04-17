@@ -49,3 +49,6 @@ Thumbs.db
 
 # React Storybook
 /storybook-static/
+recipe-app-vue/.env
+.gitignore
+
