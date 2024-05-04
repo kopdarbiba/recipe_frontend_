@@ -43,32 +43,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.home-container .banner {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.home-container .recipe-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.home-container .recipe-card {
-  width: 45%;
-  margin: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.home-container .recipe-card:hover {
-  transform: translateY(-5px);
-}
-
-.recipe-card h3 {
-  margin: 0;
-}
-</style>

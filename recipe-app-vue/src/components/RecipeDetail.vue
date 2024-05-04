@@ -37,61 +37,23 @@
     </div>
   </template>
   
-  <script>
-  import axios from 'axios';
+  <script setup>
+  import { ref, onMounted } from 'vue';
+
+  const API_URL = 'http://localhost:8000/api/recipes'
+  const id = props.id;
+  const recipe = ref(null);
   
-  export default {
-    props: ['id'],
-    data() {
-      return {
-        recipe: null
-      };
-    },
-    created() {
-      this.fetchRecipeDetails();
-    },
-    methods: {
-      fetchRecipeDetails() {
-        axios.get(`http://localhost:8000/api/recipes/${this.id}/`)
-          .then(response => {
-            this.recipe = response.data;
-          })
-          .catch(error => {
-            console.error("There was an error fetching the recipe details:", error);
-          });
-      }
-    }
+  const fetchRecipeDetails = () => {
+    axios.get(`http://localhost:8000/api/recipes/${id}/`)
+      .then(response => {
+        recipe.value = response.data;
+      })
+      .catch(error => {
+        console.error("There was an error fetching the recipe details:", error);
+      });
   };
+  
+  onMounted(fetchRecipeDetails);
   </script>
-  
-  <style>
-  .recipe-detail {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .recipe-detail h1, h2 {
-    color: #333;
-  }
-  
-  .recipe-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .recipe-metadata p, .recipe-detail ul, .recipe-detail ol {
-    margin-left: 20px;
-  }
-  
-  .recipe-detail ul, .recipe-detail ol {
-    list-style-type: none;
-  }
-  
-  .recipe-detail li {
-    padding: 5px 0;
-  }
-  </style>
   

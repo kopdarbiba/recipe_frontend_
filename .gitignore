@@ -52,3 +52,7 @@ Thumbs.db
 recipe-app-vue/.env
 .gitignore
 
+package.json
+package-lock.json
+recipe-app-vue/vite.config.js
+.gitignore

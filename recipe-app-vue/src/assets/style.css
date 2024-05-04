@@ -1,0 +1,223 @@
+/* Header */
+header {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+/* App */
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: rgb(68, 61, 60);
+  background-color: rgb(206, 195, 190);
+  position: relative;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.language-dropdown select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav a, .search-button, .search-container button, .dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+nav a:hover, .search-button:hover, .search-container button:hover {
+  background-color: #555;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  color: black;
+}
+
+main {
+  margin: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 142px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+/* RecipeDetails */
+.recipe-detail {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recipe-detail h1, h2 {
+  color: #333;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.recipe-metadata p, .recipe-detail ul, .recipe-detail ol {
+  margin-left: 20px;
+}
+
+.recipe-detail ul, .recipe-detail ol {
+  list-style-type: none;
+}
+
+.recipe-detail li {
+  padding: 5px 0;
+}
+
+/* Recipes */
+.recipes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recipes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recipe-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.recipe-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+/* Home */
+.home-container .banner {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-container .recipe-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.home-container .recipe-card {
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.home-container .recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card h3 {
+  margin: 0;
+}
