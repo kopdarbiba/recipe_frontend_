@@ -12,7 +12,8 @@
       <div class="nav-buttons">
         <router-link to="/home">Home</router-link>
         <router-link to="/about">About Us</router-link>
-        <router-link to="/recipes">Recipes</router-link>
+        <router-link to="/">Recipe Card</router-link>
+        <!-- <router-link to="/recipes">Recipes</router-link> -->
         <div class="dropdown">
           <button class="dropbtn">Cuisines</button>
           <div class="dropdown-content">
@@ -20,7 +21,7 @@
             <a href="#" @click="updateCuisine('latvian')">Latvian</a>
             <a href="#" @click="updateCuisine('russian')">Russian</a>    
           </div>
-        <router-link to="/newrecipe">Build your own recipe</router-link>  
+        <!-- <router-link to="/newrecipe">Build your own recipe</router-link>   -->
         </div>
       </div>
       <div class="search-container">
@@ -29,8 +30,11 @@
       </div>
     </nav>
     <main>
-      <router-view></router-view>
     </main>
+    <p>Recipe details</p>
+    <BasicRecipeCard RecipeID="3"></BasicRecipeCard>
+    <!-- <BasicRecipeCard RecipeID="4"></BasicRecipeCard>
+    <BasicRecipeCard RecipeID="5"></BasicRecipeCard> -->
     <Footer />
   </div>
 </template>
@@ -40,6 +44,7 @@ import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import BasicRecipeCard from './components/BasicRecipeCard.vue'
 // import Recipes from './components/Recipes.vue';
 
 const cuisines = [
