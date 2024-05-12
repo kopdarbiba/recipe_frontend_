@@ -1,18 +1,12 @@
 <template>
   <div id="app">
     <Header />
-    <div class="language-dropdown">
-      <select>
-        <option value="LV">LV</option>
-        <option value="EN">EN</option>
-        <option value="RU">RU</option>
-      </select>
-    </div>
+    <LanguageSelection />
     <nav>
       <div class="nav-buttons">
-        <router-link to="/home">Home</router-link>
-        <router-link to="/about">About Us</router-link>
-        <router-link to="/">Recipe Card</router-link>
+        <router-link to="/home">{{ t("home") }}</router-link>
+        <router-link to="/about">{{ t("about-us") }}</router-link>
+        <router-link to="/">{{ t("recipe-card") }}</router-link>
         <!-- <router-link to="/recipes">Recipes</router-link> -->
         <div class="dropdown">
           <button class="dropbtn">Cuisines</button>
@@ -46,6 +40,7 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import BasicRecipeCard from './components/BasicRecipeCard.vue'
 // import Recipes from './components/Recipes.vue';
+import LanguageSelection from './components/LanguageSelection.vue'
 
 const cuisines = [
     { label: 'All Cuisines', value: 'all' },

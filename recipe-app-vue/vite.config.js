@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
+import { resolve, dirname } from 'node:path';
+// import VueI18nPlugin from '@intlify/unplugin-vue-i18n'
 
 export default defineConfig({
   plugins: [
@@ -8,7 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': resolve(dirname(fileURLToPath(import.meta.url)), 'src'),
     },
   },
   server: {
@@ -23,7 +25,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: 'index.html'  // Adjust this if your index.html is located elsewhere
-    }
-  }
+      input: 'index.html',
+    },
+  },
 });
