@@ -4,9 +4,9 @@
     <LanguageSelection />
     <nav>
       <div class="nav-buttons">
-        <router-link to="/home">{{ t("home") }}</router-link>
-        <router-link to="/about">{{ t("about-us") }}</router-link>
-        <router-link to="/">{{ t("recipe-card") }}</router-link>
+        <router-link to="/home">{{ $t("home") }}</router-link>
+        <router-link to="/about">{{ $t("about-us") }}</router-link>
+        <router-link to="/">{{ $t("recipe-card") }}</router-link>
         <!-- <router-link to="/recipes">Recipes</router-link> -->
         <div class="dropdown">
           <button class="dropbtn">Cuisines</button>
@@ -56,5 +56,6 @@ const updateCuisine = (cuisine) => {
   selectedCuisine.value = cuisine;
   router.push({ name: 'Recipes', query: { cuisines: cuisine } });
 };
+
 </script>
 

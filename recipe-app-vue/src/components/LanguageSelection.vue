@@ -1,10 +1,5 @@
-<script setup lang="lv">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n();
-
+<script setup>
 </script>
-
 
 <template>
      <div class="language-dropdown">
